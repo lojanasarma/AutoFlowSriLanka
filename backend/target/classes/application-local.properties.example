@@ -1,0 +1,14 @@
+# Copy this file to application-local.properties (which is ignored by Git),
+# then replace every value before running the application.
+spring.datasource.url=jdbc:mysql://localhost:3306/autoflowsrilanka_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=autoflow
+spring.datasource.password=replace-with-a-strong-password
+
+# Base64-encoded, random key of at least 32 bytes.
+jwt.secret=replace-with-a-base64-encoded-32-byte-minimum-key
+
+# Required to allow initial administrator registration.
+app.registration.admin-secret=replace-with-a-long-random-admin-access-code
+
+# Include each browser origin that may make authenticated requests.
+app.cors.allowed-origins=http://localhost:3000
