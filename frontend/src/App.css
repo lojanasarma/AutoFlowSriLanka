@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: #04080F;
+  color: #FFFFFF;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(79, 195, 247, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.05) 0%, transparent 40%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.ant-typography h1, .ant-typography h2, .ant-typography h3, 
+.ant-typography h4, .ant-typography h5, .ant-typography h6,
+.ant-card-head-title, .ant-modal-title {
+  font-family: 'Orbitron', sans-serif !important;
+  color: #FFFFFF !important;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.25px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 195, 247, 0.4);
+}
+
+/* Form Labels & Technical Metadata */
+.ant-form-item-label > label {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 10px !important;
+  text-transform: uppercase;
+  letter-spacing: 2px !important;
+  color: rgba(255, 255, 255, 0.38) !important;
+  height: auto !important;
+  padding-bottom: 5px !important;
+}
+
+/* Glassmorphism Cards */
+.glass-card, .ant-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(79, 195, 247, 0.16) !important;
+  border-radius: 12px !important;
+  transition: transform 250ms ease, box-shadow 300ms ease, border-color 300ms ease !important;
+}
+
+.ant-card:hover, .glass-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 195, 247, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(79, 195, 247, 0.1) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  min-height: 48px !important;
+}
+
+/* Glowing Primary Buttons */
+.ant-btn-primary {
+  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  letter-spacing: 1.5px !important;
+  transition: all 200ms ease !important;
+}
+
+.ant-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.5) !important;
+  filter: brightness(1.15);
+}
+
+.ant-btn-primary:active {
+  transform: translateY(0);
+  filter: brightness(0.9);
+}
+
+.ant-btn-default {
+  background: rgba(79, 195, 247, 0.05) !important;
+  border: 1px solid rgba(79, 195, 247, 0.20) !important;
+  color: #4FC3F7 !important;
+  border-radius: 8px !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  letter-spacing: 1.5px !important;
+  transition: all 200ms ease !important;
+}
+
+.ant-btn-default:hover {
+  background: rgba(79, 195, 247, 0.12) !important;
+  border-color: rgba(79, 195, 247, 0.4) !important;
+  color: #80D8FF !important;
+  box-shadow: 0 0 10px rgba(79, 195, 247, 0.2) !important;
+}
+
+/* Glassmorphism Modals */
+.ant-modal-content {
+  background: #060D1C !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(79, 195, 247, 0.2) !important;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 14px !important;
+}
+
+.ant-modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+/* Table Enhancements */
+.ant-table-wrapper .ant-table {
+  background-color: transparent !important;
+}
+
+.ant-table-thead > tr > th {
+  background: rgba(79, 195, 247, 0.05) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-family: 'DM Mono', monospace !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: background-color 200ms ease;
+  font-size: 14px;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: rgba(79, 195, 247, 0.08) !important;
+}
+
+/* Inputs & Selects */
+.ant-input, .ant-select-selector, .ant-input-number, .ant-input-password, .ant-input-search-button {
+  background: rgba(255, 255, 255, 0.045) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 8px !important;
+  color: #FFFFFF !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 15px !important;
+  transition: all 200ms ease !important;
+}
+
+.ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.20) !important;
+}
+
+.ant-input:focus, .ant-select-focused .ant-select-selector, .ant-input-number-focused {
+  border-color: rgba(79, 195, 247, 0.55) !important;
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.08) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.ant-select-arrow {
+  color: rgba(255,255,255,0.38) !important;
+}
+
+.ant-select-dropdown {
+  background: #060D1C !important;
+  border: 1px solid rgba(79, 195, 247, 0.2) !important;
+}
+
+.ant-select-item {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+.ant-select-item-option-active, .ant-select-item-option-selected {
+  background: rgba(79, 195, 247, 0.1) !important;
+  color: #4FC3F7 !important;
+}
+
+/* Page Transitions */
+.page-animate-enter {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeUp 350ms ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sidebar Menu Enhancements */
+.ant-menu-dark .ant-menu-item-selected {
+  border-left: 3px solid #4FC3F7 !important;
+}
+.ant-menu-dark .ant-menu-item {
+  border-left: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+/* Futuristic Tags */
+.ant-tag {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  font-family: 'DM Mono', monospace !important;
+  font-size: 10px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+}
+.ant-tag-green {
+  background: rgba(110, 231, 183, 0.1) !important;
+  border-color: rgba(110, 231, 183, 0.3) !important;
+  color: #6EE7B7 !important;
+}
+.ant-tag-red {
+  background: rgba(248, 113, 113, 0.1) !important;
+  border-color: rgba(248, 113, 113, 0.3) !important;
+  color: #F87171 !important;
+}
+.ant-tag-blue {
+  background: rgba(79, 195, 247, 0.1) !important;
+  border-color: rgba(79, 195, 247, 0.3) !important;
+  color: #4FC3F7 !important;
+}
+.ant-tag-orange {
+  background: rgba(251, 191, 36, 0.1) !important;
+  border-color: rgba(251, 191, 36, 0.3) !important;
+  color: #FBBF24 !important;
+}
