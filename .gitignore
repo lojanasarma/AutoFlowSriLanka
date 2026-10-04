@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+backend/src/main/resources/application-local.properties
+backend/app.log*
+*.log*
+
+# Java / Maven
+target/
+out/
+*.class
+*.jar
+*.war
+.mvn/
+mvnw
+mvnw.cmd
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
